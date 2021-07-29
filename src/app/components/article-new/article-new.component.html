@@ -1,5 +1,8 @@
-<div style="width: 500px; margin: auto;">
-  <div class="submit-form">
+<div class="col-6 card " >
+  <div class="card-header">
+    New Article Form
+  </div>
+  <div class="card-body">
     <div *ngIf="!submitted">
       <div class="form-group">
         <label for="name">Name</label>
@@ -23,11 +26,12 @@
           name="description"
         />
       </div>
+      <div class="mt-4">
+        <button (click)="createArticle()" class="btn btn-success float-end">Create </button>
+      </div>
 
-      <button (click)="createArticle()" class="btn btn-success">Create</button>
     </div>
-
-    <div *ngIf="submitted">
+    <div class="card-footer" *ngIf="submitted">
       <h3>You successfully created a product!</h3>
       <button class="btn btn-success" (click)="newArticle()">Add another Article</button>
     </div>
