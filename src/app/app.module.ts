@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ArticleNewComponent } from './components/article-new/article-new.component';
 import { ArticlesListComponent } from './components/articles-list/articles-list.component';
 import { ArticleDetailsComponent } from './components/article-details/article-details.component';
+import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { ArticleDetailsComponent } from './components/article-details/article-de
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,  FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
